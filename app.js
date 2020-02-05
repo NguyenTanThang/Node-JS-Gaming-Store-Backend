@@ -8,7 +8,6 @@ const mongoose = require("mongoose");
 const config = require("./config/config");
 
 var app = express();
-app.use(cors());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", CLIENT_ORIGIN);
   res.header(
@@ -22,6 +21,7 @@ app.use(function(req, res, next) {
   }
   next();
 });
+app.use(cors());
 
 mongoose.connect(config.MONGODB_URI, {
   useNewUrlParser: true,

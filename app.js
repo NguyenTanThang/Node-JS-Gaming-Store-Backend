@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Import Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
+app.use("/test-orders", require("./routes/test-orders"));
 app.use("/orders", require("./routes/orders"));
 app.use("/products", require("./routes/products"));
 

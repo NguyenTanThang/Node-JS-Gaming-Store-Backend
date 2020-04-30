@@ -29,6 +29,7 @@ app.use("/users", require("./routes/users"));
 app.use("/test-orders", require("./routes/test-orders"));
 app.use("/orders", require("./routes/orders"));
 app.use("/products", require("./routes/products"));
+app.use("/genres", require("./routes/genres"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

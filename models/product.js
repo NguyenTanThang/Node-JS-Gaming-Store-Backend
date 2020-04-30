@@ -15,6 +15,11 @@ const schema = new Schema({
         required: true
     },
     productDescription: String,
+    genres: {
+        type: [Object],
+        required: true
+    },
+    productTrailerURL: String,
     created_date: {
         type: Date,
         default: Date.now()

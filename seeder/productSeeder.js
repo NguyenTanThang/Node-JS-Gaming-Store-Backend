@@ -6,7 +6,7 @@ mongoose.connect(config.MONGODB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true}, 
     () => { console.log("we are connected")})
     .catch(err => console.log(err));
-
+/*
 const products = [
     new Product({
         productName: "Fifa 20",
@@ -161,6 +161,156 @@ const products = [
         ],
         productTrailerURL: "https://www.youtube.com/embed/sD9vXURgnZ0",
         productDescription: "Assassin's Creed: Conspiracies (French: Assassin's Creed: Conspirations), also known as Assassin's Creed - Cycle 2, is a two-part story published in French by Les Deux Royaumes. Following the end of the first cycle by Corbeyran and Defali, this new story is written by Guillaume Dorison and illustrated by Jean-Baptiste Hostache. The first of the two volumes saw a release in October 2016."
+    })
+]
+*/
+
+const products = [
+    new Product({
+        productName: "Watch Dogs",
+        productPrice: 29.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/d/d9/Watch_Dogs_box_art.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            },
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e4',
+                genre: "Roleplay"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/DqoQG_XYF-8",
+        productDescription: "Watch Dogs (stylized as WATCH_DOGS) is a 2014 action-adventure game developed by Ubisoft Montreal and published by Ubisoft. Set in a fictionalized version of Chicago, the plot follows hacker Aiden Pearce's search for revenge after the killing of his niece. The game is played from a third-person perspective, and the world is navigated on foot or by vehicle. An online multiplayer mode allows up to eight players to engage in cooperative and competitive gameplay."
+    }),
+    new Product({
+        productName: "Dark Souls 2",
+        productPrice: 39.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/e/ed/Dark_Souls_II_cover.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e4',
+                genre: "Roleplay"
+            },
+            {
+                _id: "5eaa26f9aa7a602c4c63d7e5",
+                genre: "Statergy"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/U6uyuIQYlfY",
+        productDescription: "Dark Souls II[a] is an action role-playing game developed by FromSoftware and published by Bandai Namco Games. The third game in the Souls series, it was released for Microsoft Windows, PlayStation 3 and Xbox 360. Although both are set in the same universe, there is no direct story connection between the first Dark Souls and the sequel.[4] The game uses dedicated multiplayer servers.[4] Taking place in the kingdom of Drangleic, the game features both player versus environment (PvE) and player versus player (PvP) gameplay, in addition to having some co-op components. As in the earlier games in the series, it again features challenging gameplay, but with a more powerful graphics engine and more advanced artificial intelligence system."
+    }),
+    new Product({
+        productName: "Ori and the Will of the Wisps",
+        productPrice: 29.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/9/94/Ori_and_the_Will_of_the_Wisps.jpg",
+        genres: [
+            {
+                _id: "5eaa26f9aa7a602c4c63d7e5",
+                genre: "Statergy"
+            },
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e4',
+                genre: "Roleplay"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/2reK8k8nwBc",
+        productDescription: "Ori and the Will of the Wisps is a platform-adventure Metroidvania video game developed by Moon Studios and published by Xbox Game Studios for Xbox One and Microsoft Windows. Announced during E3 2017, the title is a direct sequel to 2015's Ori and the Blind Forest, and was released on March 11, 2020. The game is a 4K UHD, Xbox One X Enhanced and Xbox Play Anywhere title.[1]The game was developed by Moon Studios, a collective organization without a set location. The game's visuals were given an overhaul from the two-dimensional artwork in Blind Forest, to the three-dimensional models played in multilayered backgrounds in Will of the Wisps. The game maintains narrative continuity with Blind Forest and introduces new melee combat."
+    }),
+    new Product({
+        productName: "Ori and the Blind Forest",
+        productPrice: 39.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/b/b2/Ori_and_the_Blind_Forest_Logo.jpg",
+        genres: [
+            {
+                _id: "5eaa26f9aa7a602c4c63d7e5",
+                genre: "Statergy"
+            },
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e4',
+                genre: "Roleplay"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/cklw-Yu3moE",
+        productDescription: `Ori and the Blind Forest is a platform-adventure Metroidvania video game developed by Moon Studios and published by Microsoft Studios. The game was released for Xbox One and Microsoft Windows on March 11, 2015 and for Nintendo Switch on September 27, 2019. Players assume control of Ori, a small white guardian spirit, and Sein, the "light and eyes" of the Forest's Spirit Tree. Players are tasked to move between platforms and solve puzzles. The game features a save system called "Soul Links", which allows players to save their progress at will with limited resources, and an upgrade system that gives players the ability to strengthen Ori's skills.`
+    }),
+    new Product({
+        productName: "Red Dead Redemption 2",
+        productPrice: 49.99,
+        productImgURL: "https://vignette.wikia.nocookie.net/reddeadredemption/images/0/0a/Reddeadcover.jpg/revision/latest/scale-to-width-down/700?cb=20180503145113",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/eaW0tYpxyp0",
+        productDescription: "Red Dead Redemption 2 (stylized as Red Dead Redemption II) is a western-themed action-adventure video game developed and published by Rockstar Games. It is the third entry in the Red Dead series and a prequel to 2010's Red Dead Redemption[3] and was released on October 26th, 2018[4] on PlayStation 4, Xbox One[5] and on November 5th, 2019 for PC. Set in a fictional recreation of the American Old West in 1899, Red Dead Redemption 2 focuses on the life of Arthur Morgan and his position in the notorious Van der Linde gang. The game follows the gang's decline as they are pursued by lawmen, fellow gangs and Pinkerton agents. The narrative revolves around the characters of Dutch van der Linde, John Marston and Micah Bell in addition to Morgan."
+    }),
+    new Product({
+        productName: "GTA: San Andreas",
+        productPrice: 14.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/c/c4/GTASABOX.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/u_CbHrBbHNQ",
+        productDescription: `Grand Theft Auto: San Andreas is a 2004 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh title in the Grand Theft Auto series, and the followup to the 2002 game Grand Theft Auto: Vice City. It was released in October 2004 for PlayStation 2, and in June 2005 for both Microsoft Windows and Xbox. The game, set within an open world environment that players can explore and interact with at their leisure, focuses on the story of former gangster Carl "CJ" Johnson, who is brought back home by the death of his mother, only to become involved in a long journey that sees him exploring the fictional U.S. state of San Andreas, which is heavily based on California and Nevada.[b]`
+    }),
+    new Product({
+        productName: "Grand Theft Auto: Vice City",
+        productPrice: 4.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/c/ce/Vice-city-cover.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/f_VBXRZuHTc",
+        productDescription: "Grand Theft Auto: Vice City is a 2002 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first entry in the Grand Theft Auto series since 2001's Grand Theft Auto III. Set in 1986 within the fictional Vice City, based on Miami, the game follows mobster Tommy Vercetti following his release from prison. After he is caught up in an ambushed drug deal, he seeks out those responsible while building a criminal empire and seizing power from other criminal organisations in the city. The game is played from a third-person perspective, and its world is navigated on foot or by vehicle. The open world design lets the player freely roam Vice City, consisting of two main islands. The game's plot is based on multiple real-world people and events in Miami such as Cubans, Haitians, and biker gangs, the 1980s crack epidemic, the Mafioso drug lords of Miami, and the dominance of glam metal. The game was also influenced by the film and television of the era, including Scarface and Miami Vice. Much of the development work constituted creating the game world to fit the inspiration and time period; the development team conducted extensive field research in Miami while creating the world. The game was released in October 2002 for the PlayStation 2, in May 2003 for Microsoft Windows, and in October 2003 for the Xbox."
+    }),
+    new Product({
+        productName: "Tom Clancy's Rainbow Six Siege",
+        productPrice: 19.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/KlbLLRdg9u8",
+        productDescription: `Tom Clancy's Rainbow Six Siege is an online tactical shooter video game developed by Ubisoft Montreal and published by Ubisoft. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on December 1, 2015. It was also set to be released for PlayStation 5 and Xbox Series X. The game puts heavy emphasis on environmental destruction and cooperation between players. Each player assumes control of an attacker or a defender in different gameplay modes such as rescuing a hostage, defusing a bomb, and taking control of an objective within a room. The title has no campaign but features a series of short, offline missions called, "situations" that can be played solo. These missions have a loose narrative, focusing on recruits going through training to prepare them for future encounters with the "White Masks", a terrorist group that threatens the safety of the world.`
+    }),
+    new Product({
+        productName: "Battlefield V",
+        productPrice: 39.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/f/f0/Battlefield_V_standard_edition_box_art.jpg",
+        genres: [
+            {
+                _id: '5eaa26f9aa7a602c4c63d7e2',
+                genre: "Action"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/fb1MR85XFOc",
+        productDescription: "Battlefield V is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield V is the sixteenth installment in the Battlefield series. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on November 20, 2018. Those who pre-ordered the Deluxe Edition of the game were granted early access to the game on November 15, 2018,[2] and Origin Access Premium subscribers on PC received access to the game on November 9, 2018.[3] The game is based on World War II and is a thematic continuation of its World War I based precursor Battlefield 1."
+    }),
+    new Product({
+        productName: "Fatal Frame II: Crimson Butterfly",
+        productPrice: 29.99,
+        productImgURL: "https://upload.wikimedia.org/wikipedia/en/a/af/Fatal_Frame_II_-_Crimson_Butterfly.jpg",
+        genres: [
+            {
+                _id: '5ebf95241279e018d4acd423',
+                genre: "Horror"
+            }
+        ],
+        productTrailerURL: "https://www.youtube.com/embed/9czbIFtje3o",
+        productDescription: "Fatal Frame II: Crimson Butterfly,[a] is a Japanese survival horror video game developed and published by Tecmo in 2003 for the PlayStation 2. It is the second installment in the Fatal Frame series, and features an independent story with little relation to the first title. The story follows twin sisters Mio and Mayu Amakura as they explore an abandoned village and experience encounters with the paranormal. Their lives quickly become threatened when the village spirits begin to possess Mayu and target them as sacrifices for an ancient ritual. Players must use a camera with powers of exorcism to defeat enemies and uncover the secrets of the village."
     })
 ]
 

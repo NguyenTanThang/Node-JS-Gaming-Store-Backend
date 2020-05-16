@@ -7,6 +7,12 @@ mongoose.connect(config.MONGODB_URI,
     () => { console.log("we are connected")})
     .catch(err => console.log(err));
 
+    const genres = [
+        new Genre({
+            genre: "Horror"
+        })
+    ]
+/*
 const genres = [
     new Genre({
         genre: "Action"
@@ -21,6 +27,8 @@ const genres = [
         genre: "Statergy"
     }),
 ]
+*/
+
 
 let counter = 0;
 genres.forEach(genre => {

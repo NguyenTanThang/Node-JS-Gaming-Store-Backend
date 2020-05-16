@@ -12,7 +12,8 @@ app.use(cors());
 
 mongoose.connect(config.MONGODB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex:true
 }, () => {
   console.log("we are connected")
 }).catch(err => console.log(err));

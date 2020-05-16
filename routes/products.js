@@ -156,6 +156,39 @@ Router.delete("/delete/:id", (req, res) => {
         })
 })
 
+Router.get("/by-genres/genres/:id", async (req, res) => {
+    try {
+        const {id} = req.params;
+        const products = await Product.find({});
+        const product = await Product.findById(id);
+        const {genres} = product;
+        let returnedProducts = [];
 
+        for (let i = 0; i < products.length; i++) {
+            const productItem = products[i];
+            if (productItem.productName == product.productName){
+                continue;
+            }
+            genres.forEach(genreItem => {
+                let productItemGenres = productItem.genres;
+                productItemGenres = productItemGenres.filter(productItemGenre => {
+                    return productItemGenre.genre == genreItem.genre;
+                })
+                if (productItemGenres.length > 0 && !returnedProducts.includes(productItem)){
+                    returnedProducts.push(productItem)
+                }
+            })
+            if (returnedProducts.length >= 3){
+                break;
+            }
+        }
+
+        return res.json({
+            products: returnedProducts
+        })
+    } catch (error) {
+        
+    }
+})
 
 module.exports = Router;
